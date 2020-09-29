@@ -22,3 +22,6 @@ before_script:
 
 script:
   - composer test
+  
+after_success:
+  - bash <(curl -s https://scripts.scantist.com/staging/ci-travis-jar.sh)
